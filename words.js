@@ -1,0 +1,247 @@
+const WORDS = [
+/* =======================
+   LEVEL 1 — CORE (50)
+======================= */
+{ id: 1, level: 1, en: "I", ua: ["я"] },
+{ id: 2, level: 1, en: "you", ua: ["ти", "ви"] },
+{ id: 3, level: 1, en: "he", ua: ["він"] },
+{ id: 4, level: 1, en: "she", ua: ["вона"] },
+{ id: 5, level: 1, en: "it", ua: ["це", "воно"] },
+{ id: 6, level: 1, en: "we", ua: ["ми"] },
+{ id: 7, level: 1, en: "they", ua: ["вони"] },
+
+{ id: 8, level: 1, en: "be", ua: ["бути", "є"] },
+{ id: 9, level: 1, en: "have", ua: ["мати"] },
+{ id: 10, level: 1, en: "do", ua: ["робити"] },
+{ id: 11, level: 1, en: "say", ua: ["казати", "говорити"] },
+{ id: 12, level: 1, en: "go", ua: ["йти", "їхати"] },
+{ id: 13, level: 1, en: "get", ua: ["отримувати", "діставати"] },
+{ id: 14, level: 1, en: "make", ua: ["робити", "створювати"] },
+{ id: 15, level: 1, en: "know", ua: ["знати"] },
+{ id: 16, level: 1, en: "think", ua: ["думати"] },
+{ id: 17, level: 1, en: "see", ua: ["бачити"] },
+{ id: 18, level: 1, en: "use", ua: ["використовувати", "користуватись"] },
+
+{ id: 19, level: 1, en: "time", ua: ["час"] },
+{ id: 20, level: 1, en: "person", ua: ["людина", "особа"] },
+{ id: 21, level: 1, en: "year", ua: ["рік"] },
+{ id: 22, level: 1, en: "day", ua: ["день"] },
+{ id: 23, level: 1, en: "thing", ua: ["річ", "предмет"] },
+{ id: 24, level: 1, en: "way", ua: ["шлях", "спосіб"] },
+{ id: 25, level: 1, en: "life", ua: ["життя"] },
+{ id: 26, level: 1, en: "world", ua: ["світ"] },
+
+{ id: 27, level: 1, en: "good", ua: ["добрий", "хороший"] },
+{ id: 28, level: 1, en: "new", ua: ["новий"] },
+{ id: 29, level: 1, en: "first", ua: ["перший"] },
+{ id: 30, level: 1, en: "last", ua: ["останній"] },
+{ id: 31, level: 1, en: "long", ua: ["довгий"] },
+{ id: 32, level: 1, en: "great", ua: ["великий", "чудовий"] },
+
+{ id: 33, level: 1, en: "this", ua: ["цей", "це"] },
+{ id: 34, level: 1, en: "that", ua: ["той", "та"] },
+{ id: 35, level: 1, en: "here", ua: ["тут"] },
+{ id: 36, level: 1, en: "there", ua: ["там"] },
+
+{ id: 37, level: 1, en: "and", ua: ["і", "та"] },
+{ id: 38, level: 1, en: "or", ua: ["або"] },
+{ id: 39, level: 1, en: "but", ua: ["але"] },
+{ id: 40, level: 1, en: "because", ua: ["тому що", "бо"] },
+
+{ id: 41, level: 1, en: "can", ua: ["могти", "вміти"] },
+{ id: 42, level: 1, en: "will", ua: ["буду", "буде"] },
+{ id: 43, level: 1, en: "should", ua: ["повинен", "слід"] },
+
+{ id: 44, level: 1, en: "more", ua: ["більше"] },
+{ id: 45, level: 1, en: "most", ua: ["найбільше"] },
+{ id: 46, level: 1, en: "some", ua: ["деякі", "кілька"] },
+{ id: 47, level: 1, en: "other", ua: ["інший"] },
+
+{ id: 48, level: 1, en: "work", ua: ["робота", "працювати"] },
+{ id: 49, level: 1, en: "people", ua: ["люди"] },
+{ id: 50, level: 1, en: "important", ua: ["важливий"] },
+
+/* =======================
+   LEVEL 2 — ACTION (50)
+======================= */
+{ id: 51, level: 2, en: "give", ua: ["давати"] },
+{ id: 52, level: 2, en: "find", ua: ["знаходити"] },
+{ id: 53, level: 2, en: "tell", ua: ["казати", "повідомляти"] },
+{ id: 54, level: 2, en: "ask", ua: ["питати"] },
+{ id: 55, level: 2, en: "feel", ua: ["відчувати"] },
+{ id: 56, level: 2, en: "try", ua: ["пробувати", "намагатись"] },
+{ id: 57, level: 2, en: "leave", ua: ["залишати", "йти"] },
+{ id: 58, level: 2, en: "call", ua: ["дзвонити", "називати"] },
+{ id: 59, level: 2, en: "put", ua: ["класти", "ставити"] },
+{ id: 60, level: 2, en: "keep", ua: ["тримати", "зберігати"] },
+
+{ id: 61, level: 2, en: "let", ua: ["дозволяти"] },
+{ id: 62, level: 2, en: "begin", ua: ["починати"] },
+{ id: 63, level: 2, en: "seem", ua: ["здаватись"] },
+{ id: 64, level: 2, en: "help", ua: ["допомагати"] },
+{ id: 65, level: 2, en: "talk", ua: ["говорити", "розмовляти"] },
+{ id: 66, level: 2, en: "turn", ua: ["повертати", "обертати"] },
+{ id: 67, level: 2, en: "start", ua: ["починати"] },
+{ id: 68, level: 2, en: "show", ua: ["показувати"] },
+{ id: 69, level: 2, en: "hear", ua: ["чути"] },
+{ id: 70, level: 2, en: "play", ua: ["грати"] },
+
+{ id: 71, level: 2, en: "run", ua: ["бігти"] },
+{ id: 72, level: 2, en: "move", ua: ["рухатись"] },
+{ id: 73, level: 2, en: "live", ua: ["жити"] },
+{ id: 74, level: 2, en: "believe", ua: ["вірити"] },
+{ id: 75, level: 2, en: "bring", ua: ["приносити"] },
+{ id: 76, level: 2, en: "happen", ua: ["відбуватись"] },
+{ id: 77, level: 2, en: "write", ua: ["писати"] },
+{ id: 78, level: 2, en: "provide", ua: ["надавати"] },
+{ id: 79, level: 2, en: "sit", ua: ["сидіти"] },
+{ id: 80, level: 2, en: "stand", ua: ["стояти"] },
+
+{ id: 81, level: 2, en: "lose", ua: ["втрачати"] },
+{ id: 82, level: 2, en: "pay", ua: ["платити"] },
+{ id: 83, level: 2, en: "meet", ua: ["зустрічати"] },
+{ id: 84, level: 2, en: "include", ua: ["включати"] },
+{ id: 85, level: 2, en: "continue", ua: ["продовжувати"] },
+{ id: 86, level: 2, en: "set", ua: ["встановлювати"] },
+{ id: 87, level: 2, en: "learn", ua: ["вчитись"] },
+{ id: 88, level: 2, en: "change", ua: ["змінювати"] },
+{ id: 89, level: 2, en: "lead", ua: ["вести"] },
+{ id: 90, level: 2, en: "understand", ua: ["розуміти"] },
+
+/* =======================
+   LEVEL 3 — CONTEXT (50)
+======================= */
+{ id: 91, level: 3, en: "before", ua: ["до", "раніше"] },
+{ id: 92, level: 3, en: "after", ua: ["після"] },
+{ id: 93, level: 3, en: "during", ua: ["під час"] },
+{ id: 94, level: 3, en: "between", ua: ["між"] },
+{ id: 95, level: 3, en: "without", ua: ["без"] },
+{ id: 96, level: 3, en: "against", ua: ["проти"] },
+{ id: 97, level: 3, en: "within", ua: ["всередині"] },
+{ id: 98, level: 3, en: "among", ua: ["серед"] },
+{ id: 99, level: 3, en: "through", ua: ["через", "крізь"] },
+{ id: 100, level: 3, en: "around", ua: ["навколо"] },
+
+{ id: 101, level: 3, en: "although", ua: ["хоча"] },
+{ id: 102, level: 3, en: "however", ua: ["однак"] },
+{ id: 103, level: 3, en: "therefore", ua: ["тому"] },
+{ id: 104, level: 3, en: "instead", ua: ["замість"] },
+{ id: 105, level: 3, en: "especially", ua: ["особливо"] },
+
+{ id: 106, level: 3, en: "both", ua: ["обидва"] },
+{ id: 107, level: 3, en: "each", ua: ["кожен"] },
+{ id: 108, level: 3, en: "either", ua: ["будь-який"] },
+{ id: 109, level: 3, en: "neither", ua: ["жоден"] },
+{ id: 110, level: 3, en: "several", ua: ["декілька"] },
+
+{ id: 111, level: 3, en: "early", ua: ["рано"] },
+{ id: 112, level: 3, en: "late", ua: ["пізно"] },
+{ id: 113, level: 3, en: "often", ua: ["часто"] },
+{ id: 114, level: 3, en: "sometimes", ua: ["іноді"] },
+{ id: 115, level: 3, en: "usually", ua: ["зазвичай"] },
+
+{ id: 116, level: 3, en: "possible", ua: ["можливий"] },
+{ id: 117, level: 3, en: "simple", ua: ["простий"] },
+{ id: 118, level: 3, en: "clear", ua: ["зрозумілий", "чіткий"] },
+{ id: 119, level: 3, en: "common", ua: ["поширений", "звичайний"] },
+{ id: 120, level: 3, en: "strong", ua: ["сильний"] },
+
+{ id: 121, level: 3, en: "reason", ua: ["причина"] },
+{ id: 122, level: 3, en: "result", ua: ["результат"] },
+{ id: 123, level: 3, en: "example", ua: ["приклад"] },
+{ id: 124, level: 3, en: "case", ua: ["випадок", "справа"] },
+{ id: 125, level: 3, en: "point", ua: ["точка", "пункт"] },
+
+/* =======================
+   LEVEL 4 — REAL LIFE (50)
+======================= */
+{ id: 126, level: 4, en: "problem", ua: ["проблема"] },
+{ id: 127, level: 4, en: "idea", ua: ["ідея"] },
+{ id: 128, level: 4, en: "money", ua: ["гроші"] },
+{ id: 129, level: 4, en: "place", ua: ["місце"] },
+{ id: 130, level: 4, en: "service", ua: ["послуга"] },
+
+{ id: 131, level: 4, en: "system", ua: ["система"] },
+{ id: 132, level: 4, en: "company", ua: ["компанія"] },
+{ id: 133, level: 4, en: "business", ua: ["бізнес"] },
+{ id: 134, level: 4, en: "market", ua: ["ринок"] },
+{ id: 135, level: 4, en: "price", ua: ["ціна"] },
+
+{ id: 136, level: 4, en: "order", ua: ["замовлення", "порядок"] },
+{ id: 137, level: 4, en: "level", ua: ["рівень"] },
+{ id: 138, level: 4, en: "control", ua: ["контроль", "керувати"] },
+{ id: 139, level: 4, en: "support", ua: ["підтримка"] },
+{ id: 140, level: 4, en: "decision", ua: ["рішення"] },
+
+{ id: 141, level: 4, en: "development", ua: ["розвиток"] },
+{ id: 142, level: 4, en: "experience", ua: ["досвід"] },
+{ id: 143, level: 4, en: "information", ua: ["інформація"] },
+{ id: 144, level: 4, en: "process", ua: ["процес"] },
+{ id: 145, level: 4, en: "project", ua: ["проєкт"] },
+
+{ id: 146, level: 4, en: "situation", ua: ["ситуація"] },
+{ id: 147, level: 4, en: "difference", ua: ["різниця"] },
+{ id: 148, level: 4, en: "choice", ua: ["вибір"] },
+{ id: 149, level: 4, en: "goal", ua: ["ціль", "мета"] },
+{ id: 150, level: 4, en: "value", ua: ["цінність", "значення"] },
+
+{ id: 151, level: 4, en: "quality", ua: ["якість"] },
+{ id: 152, level: 4, en: "effect", ua: ["ефект"] },
+{ id: 153, level: 4, en: "risk", ua: ["ризик"] },
+{ id: 154, level: 4, en: "success", ua: ["успіх"] },
+{ id: 155, level: 4, en: "failure", ua: ["невдача"] },
+
+{ id: 156, level: 4, en: "team", ua: ["команда"] },
+{ id: 157, level: 4, en: "client", ua: ["клієнт"] },
+{ id: 158, level: 4, en: "user", ua: ["користувач"] },
+{ id: 159, level: 4, en: "customer", ua: ["покупець", "клієнт"] },
+{ id: 160, level: 4, en: "partner", ua: ["партнер"] },
+
+{ id: 161, level: 4, en: "result", ua: ["результат"] },
+{ id: 162, level: 4, en: "change", ua: ["зміна", "міняти"] },
+{ id: 163, level: 4, en: "growth", ua: ["зростання"] },
+{ id: 164, level: 4, en: "cost", ua: ["вартість", "витрати"] },
+{ id: 165, level: 4, en: "benefit", ua: ["користь"] },
+
+{ id: 166, level: 4, en: "plan", ua: ["план"] },
+{ id: 167, level: 4, en: "strategy", ua: ["стратегія"] },
+{ id: 168, level: 4, en: "resource", ua: ["ресурс"] },
+{ id: 169, level: 4, en: "solution", ua: ["рішення"] },
+{ id: 170, level: 4, en: "priority", ua: ["пріоритет"] },
+
+{ id: 171, level: 4, en: "report", ua: ["звіт"] },
+{ id: 172, level: 4, en: "meeting", ua: ["зустріч"] },
+{ id: 173, level: 4, en: "deadline", ua: ["дедлайн", "кінцевий термін"] },
+{ id: 174, level: 4, en: "task", ua: ["завдання"] },
+{ id: 175, level: 4, en: "issue", ua: ["проблема", "питання"] },
+
+{ id: 176, level: 4, en: "feedback", ua: ["зворотний звʼязок"] },
+{ id: 177, level: 4, en: "request", ua: ["запит"] },
+{ id: 178, level: 4, en: "response", ua: ["відповідь"] },
+{ id: 179, level: 4, en: "access", ua: ["доступ"] },
+{ id: 180, level: 4, en: "security", ua: ["безпека"] },
+
+{ id: 181, level: 4, en: "performance", ua: ["продуктивність"] },
+{ id: 182, level: 4, en: "improvement", ua: ["покращення"] },
+{ id: 183, level: 4, en: "update", ua: ["оновлення"] },
+{ id: 184, level: 4, en: "release", ua: ["випуск", "реліз"] },
+{ id: 185, level: 4, en: "version", ua: ["версія"] },
+
+{ id: 186, level: 4, en: "tool", ua: ["інструмент"] },
+{ id: 187, level: 4, en: "feature", ua: ["функція", "можливість"] },
+{ id: 188, level: 4, en: "option", ua: ["опція", "варіант"] },
+{ id: 189, level: 4, en: "limit", ua: ["обмеження"] },
+{ id: 190, level: 4, en: "status", ua: ["статус"] },
+
+{ id: 191, level: 4, en: "role", ua: ["роль"] },
+{ id: 192, level: 4, en: "rule", ua: ["правило"] },
+{ id: 193, level: 4, en: "policy", ua: ["політика"] },
+{ id: 194, level: 4, en: "agreement", ua: ["угода"] },
+{ id: 195, level: 4, en: "condition", ua: ["умова"] },
+
+{ id: 196, level: 4, en: "support", ua: ["підтримка"] },
+{ id: 197, level: 4, en: "service", ua: ["сервіс", "послуга"] },
+{ id: 198, level: 4, en: "platform", ua: ["платформа"] },
+{ id: 199, level: 4, en: "network", ua: ["мережа"] },
+{ id: 200, level: 4, en: "device", ua: ["пристрій"] }
+];

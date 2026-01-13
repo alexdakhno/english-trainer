@@ -1,0 +1,10 @@
+body{margin:0;font-family:-apple-system;background:#0f172a;color:#fff}
+.app{padding:16px}
+.word-row{background:#1e293b;border-radius:12px;padding:12px;margin-bottom:10px;display:flex;gap:10px}
+.word{min-width:90px;font-weight:600}
+input{flex:1;background:#020617;border:1px solid #334155;border-radius:8px;padding:10px;color:#fff}
+.correct{border-color:#22c55e}
+.wrong{border-color:#ef4444;animation:shake .3s}
+.btn{width:100%;padding:14px;border-radius:14px;border:none;background:#3b82f6;color:#fff;font-size:18px}
+.stats{display:flex;justify-content:space-between;font-size:13px;opacity:.85}
+@keyframes shake{0%{transform:0}25%{transform:translateX(-4px)}50%{transform:translateX(4px)}75%{transform:translateX(-4px)}100%{transform:0}}
